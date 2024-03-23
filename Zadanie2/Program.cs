@@ -1,13 +1,20 @@
 ﻿class Program
 {
-    static void PrintArgument(string arg)
+    static double CalculateAverage(int[] numbers)
     {
-        Console.WriteLine("Argument passed: " + arg);
-    }
+        if (numbers.Length == 0) return 0;
 
-    static void Main()
-    {
-        string argument = "Hello, World!";
-        PrintArgument(argument);
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        return (double) sum / numbers.Length;
+    } 
+
+    static void Main() {
+        int[] nums = { 5, 10, 15, 20, 25 };
+        double average = CalculateAverage(nums);
+        Console.WriteLine("Average: " + average);
     }
 }
