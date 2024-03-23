@@ -1,6 +1,6 @@
 ﻿class Program
 {
-    static int FindMax(int[] numbers) {
+    static int FindMaxValue(int[] numbers) {
         if (numbers == null || numbers.Length == 0) {
             throw new ArgumentException("The array is null or empty.");
         }
@@ -17,7 +17,7 @@
 
     static void Main() {
         int[] nums = { 5, 10, 3, 99, 8, 15 };
-        int max = FindMax(nums);
+        int max = FindMaxValue(nums);
         Console.WriteLine("Max value: " + max);
     }
 }
