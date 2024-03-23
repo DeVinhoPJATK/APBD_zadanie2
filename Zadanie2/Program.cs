@@ -6,9 +6,9 @@
         }
         int max = numbers[0];
         
-        foreach (int num in numbers) {
-            if (num > max) {
-                max = num;
+        foreach (int n1 in numbers) {
+            if (n1 > max) {
+                max = n1;
             }
         }
 
