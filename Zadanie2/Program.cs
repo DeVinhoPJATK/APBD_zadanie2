@@ -1,20 +1,23 @@
 ﻿class Program
 {
-    static double CalculateAverage(int[] numbers)
-    {
-        if (numbers.Length == 0) return 0;
-
-        int sum = 0;
-        foreach (int number in numbers)
-        {
-            sum += number;
+    static int FindMax(int[] numbers) {
+        if (numbers == null || numbers.Length == 0) {
+            throw new ArgumentException("The array is null or empty.");
         }
-        return (double) sum / numbers.Length;
-    } 
+        int max = numbers[0];
+        
+        foreach (int num in numbers) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        return max;
+    }
 
     static void Main() {
-        int[] nums = { 5, 10, 15, 20, 25 };
-        double average = CalculateAverage(nums);
-        Console.WriteLine("Average: " + average);
+        int[] nums = { 5, 10, 3, 99, 8, 15 };
+        int max = FindMax(nums);
+        Console.WriteLine("Max value: " + max);
     }
 }
